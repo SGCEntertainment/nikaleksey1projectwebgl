@@ -2,7 +2,7 @@
   "version": "",
   "gameTypes": [
     {
-      "enable": true,
+      "enable": 1,
       "name": "Начать игру",
       "questions": [
         {
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "enable": true,
+      "enable": 1,
       "name": "Правда или фейк?",
       "questions": [
         {
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "enable": false,
+      "enable": 1,
       "name": "Бонус игра",
       "questions": []
     }
