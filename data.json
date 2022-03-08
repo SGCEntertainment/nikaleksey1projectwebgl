@@ -1,1 +1,38 @@
-{"version":"0.0.1","gameTypes":[{"name":"Начать игру","questions":[{"id":0,"correctIndex":1,"main":"Назови самую большую страну в мире","long_ansver":"Невероятно, но факт - самой большой страной в мире является Россия, Канада вторая страна по площади, Китай - самый заселённый","a":{"str":"Канада","url_img":"https://exampledocspdf.000webhostapp.com/0question/canada.png"},"b":{"str":"Россия","url_img":"https://exampledocspdf.000webhostapp.com/0question/ru.png"},"c":{"str":"Америка","url_img":"https://exampledocspdf.000webhostapp.com/0question/usa.png"},"d":{"str":"Китай","url_img":"https://exampledocspdf.000webhostapp.com/0question/china.png"}}]}]}
+{
+  "version": "",
+  "gameTypes": [
+    {
+      "enable": true,
+      "name": "Начать игру",
+      "questions": [
+        {
+          "id": 0,
+          "main": "Назови самую большую страну в мире",
+          "long_ansver": "Невероятно, но факт - самой большой страной в мире является Россия, Канада вторая страна по площади, Китай - самый заселённый",
+          "variants": [
+            {
+              "correct": false,
+              "str": "Канада",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/canada.png"
+            },
+            {
+              "correct": true,
+              "str": "Россия",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/ru.png"
+            },
+            {
+              "correct": false,
+              "str": "Америка",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/usa.png"
+            },
+            {
+              "correct": false,
+              "str": "Китай",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/china.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
