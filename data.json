@@ -33,6 +33,34 @@
           ]
         }
       ]
+    },
+    {
+      "enable": true,
+      "name": "Правда или фейк?",
+      "questions": [
+        {
+          "id": 0,
+          "main": "1 БОЛЬШЕ 0",
+          "long_ansver": "Невероятно, но один и вправду больше нуля, какой ты молодец :)",
+          "variants": [
+            {
+              "correct": true,
+              "str": "Да",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/canada.png"
+            },
+            {
+              "correct": false,
+              "str": "Нет",
+              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/ru.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "enable": false,
+      "name": "Бонус игра",
+      "questions": []
     }
   ]
 }
