@@ -1,69 +1,49 @@
 {
-  "version": "",
-  "gameTypes": [
-    {
-      "gameID": 0,
-      "enable": true,
-      "name": "Начать игру",
-      "questions": [
-        {
-          "id": 0,
-          "main": "Назови самую большую страну в мире",
-          "long_ansver": "Невероятно, но факт - самой большой страной в мире является Россия, Канада вторая страна по площади, Китай - самый заселённый",
-          "variants": [
-            {
-              "correct": false,
-              "str": "Канада",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/canada.png"
-            },
-            {
-              "correct": true,
-              "str": "Россия",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/ru.png"
-            },
-            {
-              "correct": false,
-              "str": "Америка",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/usa.png"
-            },
-            {
-              "correct": false,
-              "str": "Китай",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/china.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "gameID": 1,
-      "enable": true,
-      "name": "Правда или фейк?",
-      "questions": [
-        {
-          "id": 0,
-          "main": "1 БОЛЬШЕ 0",
-          "long_ansver": "Невероятно, но один и вправду больше нуля, какой ты молодец :)",
-          "variants": [
-            {
-              "correct": true,
-              "str": "Да",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/canada.png"
-            },
-            {
-              "correct": false,
-              "str": "Нет",
-              "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/0question/ru.png"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "gameID": 2,
-      "enable": false,
-      "name": "Бонус игра",
-      "questions": []
-    }
-  ]
+  "version": "0.0.1",
+  "simpleQuiz": {
+    "gameID": 0,
+    "enable": true,
+    "name": "Начать игру",
+    "questions": [
+      {
+        "id": 0,
+        "main": "Самая большая страна",
+        "long_ansver": "Невероятно тралаала",
+        "variants": [
+          {
+            "correct": false,
+            "str": "Канада",
+            "url_img": ""
+          },
+          {
+            "correct": true,
+            "str": "Россия",
+            "url_img": ""
+          },
+          {
+            "correct": false,
+            "str": "США",
+            "url_img": ""
+          },
+          {
+            "correct": false,
+            "str": "Китай",
+            "url_img": ""
+          }
+        ]
+      }
+    ]
+  },
+  "fakeQuiz": {
+    "gameID": 1,
+    "enable": true,
+    "name": "Правда или фэйк?",
+    "fakeQuestions": [
+      {
+        "id": 0,
+        "main_url_img": "",
+        "correctID": 0
+      }
+    ]
+  }
 }
