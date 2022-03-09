@@ -13,22 +13,22 @@
           {
             "correct": false,
             "str": "Канада",
-            "url_img": ""
+            "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/GameData/SimpleQuiz/canada.png"
           },
           {
             "correct": true,
             "str": "Россия",
-            "url_img": ""
+            "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/GameData/SimpleQuiz/ru.png"
           },
           {
             "correct": false,
             "str": "США",
-            "url_img": ""
+            "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/GameData/SimpleQuiz/usa.png"
           },
           {
             "correct": false,
             "str": "Китай",
-            "url_img": ""
+            "url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/GameData/SimpleQuiz/china.png"
           }
         ]
       }
@@ -41,7 +41,7 @@
     "fakeQuestions": [
       {
         "id": 0,
-        "main_url_img": "",
+        "main_url_img": "https://raw.githubusercontent.com/SGCEntertainment/nikaleksey1projectwebgl/master/GameData/FakeQuiz/0/faketest.png",
         "correctID": 0
       }
     ]
