@@ -22,6 +22,20 @@
       </div>
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
+	
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+	<script>
+	vkBridge.send('VKWebAppInit');
+	
+	function buy_item()
+	{
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: "item1"}).then(data => { });
+	}
+	
+	buy_item();
+	</script>
+	
+	
     <script>
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
