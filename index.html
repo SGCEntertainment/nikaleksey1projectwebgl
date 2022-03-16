@@ -35,7 +35,7 @@
 	
 	function VKWebAppGetAuthToken()
 	{
-		vkBridge.send("VKWebAppGetAuthToken", {"app_id": 7710215, "scope": "friends,status"});
+		vkBridge.send("VKWebAppGetAuthToken", {"app_id": 7710215, "scope": "friends,status"}).then(data => console.log(data.status)).catch(error => console.log(error));
 	}
 	
 	</script>
