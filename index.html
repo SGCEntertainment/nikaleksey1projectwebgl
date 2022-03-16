@@ -30,7 +30,7 @@
 	
 	function buy_item()
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: "item1"}).then(data => { });
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: "item1"}).then(data => console.log(data.status)).catch(error => console.log(error));
 	}
 	
 	function VKWebAppGetAuthToken()
