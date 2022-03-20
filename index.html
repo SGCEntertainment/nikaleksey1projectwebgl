@@ -28,14 +28,9 @@
 	
 	vkBridge.send('VKWebAppInit');
 	
-	function buy_item()
+	function buy_item(str)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: "item1"}).then(data => console.log(data)).catch(error => console.log(error));
-	}
-	
-	function VKWebAppGetAuthToken()
-	{
-		vkBridge.send("VKWebAppGetAuthToken", {"app_id": 7710215, "scope": "friends,status"}).then(data => console.log(data)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: str}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
 	</script>
