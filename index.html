@@ -28,9 +28,14 @@
 	
 	vkBridge.send('VKWebAppInit');
 	
-	function buy_item(str)
+	function buy_item(product_id)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item',item: str}).then(data => console.log(data)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: "item", item: product_id}).then(data => console.log(data)).catch(error => console.log(error));
+	}
+	
+	function VKWebAppJoinGroupMethod(group_id)
+	{
+		vkBridge.send("VKWebAppJoinGroup", {"group_id": group_id}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
 	</script>
