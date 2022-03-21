@@ -30,13 +30,22 @@
 	
 	function buy_item(product_id)
 	{
-		console.log(product_id);
-		vkBridge.send("VKWebAppShowOrderBox", {type: "item", item: product_id}).then(data => console.log(data)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
 	function VKWebAppJoinGroupMethod(group_id)
 	{
 		vkBridge.send("VKWebAppJoinGroup", {"group_id": group_id}).then(data => console.log(data)).catch(error => console.log(error));
+	}
+	
+	function VKWebAppCheckNativeAdsMethod()
+	{
+		vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
+	}
+	
+	function VKWebAppShowNativeAdsMethod()
+	{
+		vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
 	</script>
