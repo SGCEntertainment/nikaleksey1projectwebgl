@@ -30,7 +30,7 @@
 	
 	function buy_item(product_id)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => console.log(data)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityInstance.SendMessage('TestObject', 'GetTest', data.status);).catch(error => console.log(error));
 	}
 	
 	function VKWebAppJoinGroupMethod(group_id)
