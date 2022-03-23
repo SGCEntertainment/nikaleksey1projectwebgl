@@ -32,7 +32,7 @@
 	
 	function buy_item(product_id)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityGame.SendMessage('TestObject', 'GetTest', false)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityGame.SendMessage('TestObject', 'GetTest', data)).catch(error => console.log(error));
 	}
 	
 	function VKWebAppJoinGroupMethod(group_id)

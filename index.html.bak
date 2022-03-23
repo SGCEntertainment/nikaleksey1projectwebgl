@@ -32,7 +32,7 @@
 	
 	function buy_item(product_id)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityGame.SendMessage('TestObject', 'GetTest', data.status)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityGame.SendMessage('TestObject', 'GetTest', false)).catch(error => console.log(error));
 	}
 	
 	function VKWebAppJoinGroupMethod(group_id)
@@ -48,11 +48,6 @@
 	function VKWebAppShowNativeAdsMethod()
 	{
 		vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
-	}
-	
-	function ReturnTestMethod()
-	{
-		console.log("call ReturnTestMethod");
 	}
 	
       const hideFullScreenButton = "1";
@@ -76,7 +71,8 @@
       const fullscreenButton = document.querySelector("#unity-fullscreen-button");
       const spinner = document.querySelector('.spinner');
 
-      const canFullscreen = (function() {
+      const canFullscreen = (function() 
+	  {
         for (const key of [
             'exitFullscreen',
             'webkitExitFullscreen',
@@ -91,10 +87,12 @@
         return false;
       }());
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) 
+	  {
         container.className = "unity-mobile";
         config.devicePixelRatio = 0;
       }
+	  
       loadingCover.style.display = "";
 
       const script = document.createElement("script");
