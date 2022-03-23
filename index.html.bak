@@ -24,13 +24,15 @@
     <div id="unity-fullscreen-button" style="display: none;"></div>
 	
 	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-	<script>
+    <script>
+	
+	var  unityGame;
 	
 	vkBridge.send('VKWebAppInit');
 	
 	function buy_item(product_id)
 	{
-		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => SendMessage('TestObject', 'GetTest', data.status)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowOrderBox", {type: 'item', item: product_id}).then(data => unityGame.SendMessage('TestObject', 'GetTest', data.status)).catch(error => console.log(error));
 	}
 	
 	function VKWebAppJoinGroupMethod(group_id)
@@ -53,10 +55,6 @@
 		console.log("call ReturnTestMethod");
 	}
 	
-	</script>
-	
-	
-    <script>
       const hideFullScreenButton = "1";
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/nikaleksey1projectwebgl.loader.js";
@@ -101,22 +99,31 @@
 
       const script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
+      script.onload = () => 
+	  {
+        createUnityInstance(canvas, config, (progress) => 
+		{
           spinner.style.display = "none";
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
+        }).then((unityInstance) => 
+		{
+		  unityGame = unityInstance; //This mine
+		  
           loadingCover.style.display = "none";
-          if (canFullscreen) {
-            if (!hideFullScreenButton) {
+          if (canFullscreen) 
+		  {
+            if (!hideFullScreenButton) 
+			{
               fullscreenButton.style.display = "";
             }
-            fullscreenButton.onclick = () => {
+            fullscreenButton.onclick = () => 
+			{
               unityInstance.SetFullscreen(1);
             };
           }
-        }).catch((message) => {
+        }).catch((message) => 
+		{
           alert(message);
         });
       };
