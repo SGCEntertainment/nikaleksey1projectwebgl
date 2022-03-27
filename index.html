@@ -7,6 +7,7 @@
     <title>nikaleksey1project</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
   </head>
   <body class="dark">
     <div id="unity-container" class="unity-desktop">
@@ -23,7 +24,6 @@
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
 	
-	<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script>
 	
 	var  unityGame;
@@ -45,9 +45,9 @@
 		vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
-	function VKWebAppShowNativeAdsMethod()
+	function VKWebAppShowNativeAdsMethod(ad_format)
 	{
-		vkBridge.send("VKWebAppShowNativeAds", {ad_format:"interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowNativeAds", {ad_format:ad_format}).then(if(ad_format == 'reward') unityGame.SendMessage('Receiver', 'AddEnergy')).catch(error => console.log(error));
 	}
 	
       const hideFullScreenButton = "1";
