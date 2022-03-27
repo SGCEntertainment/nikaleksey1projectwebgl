@@ -45,9 +45,9 @@
 		vkBridge.send("VKWebAppCheckNativeAds", {"ad_format": "interstitial"}).then(data => console.log(data)).catch(error => console.log(error));
 	}
 	
-	function VKWebAppShowNativeAdsMethod(ad_format)
+	function VKWebAppShowNativeAdsRewardMethod()
 	{
-		vkBridge.send("VKWebAppShowNativeAds", {ad_format:ad_format}).then(if(ad_format == 'reward') unityGame.SendMessage('Receiver', 'AddEnergy')).catch(error => console.log(error));
+		vkBridge.send("VKWebAppShowNativeAds", {ad_format: "reward"}).then(unityGame.SendMessage('Receiver', 'AddEnergy')).catch(error => console.log(error));
 	}
 	
       const hideFullScreenButton = "1";
